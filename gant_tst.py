@@ -155,10 +155,9 @@ def create_gantt_chart(num_act, starts, ends, baseline, new_baseline, timepoint=
             ax.plot([new_baseline[i+1]-0.1, new_baseline[i+1]-0.1], [(i+1)*0.5+0.23, (i+1)*0.5-0.23],
                     color='#000000', linewidth=3, linestyle=':')
 
-    locsy, labelsy = plt.yticks(pos, ylabels)
+    labelsy = plt.yticks(pos, ylabels)
     plt.setp(labelsy, fontsize=14)
-
-
+    
     ax.axes.yaxis.set_ticklabels([])
 
     xlim_max = max_time+1
